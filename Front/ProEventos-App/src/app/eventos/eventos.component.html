@@ -22,13 +22,13 @@
       <th class="text-center" scope="col">Opções</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventos">
       <td class="text-center">{{evento.eventoId}}</td>
       <td class="text-center">{{evento.imgURL}}</td>
       <td class="text-center">{{evento.tema}}</td>
       <td class="text-center">{{evento.local}}</td>
-      <td class="text-center">{{evento.dataEvento}}</td>
+      <td class="text-center">{{evento.dataEvento | date: 'dd/MM/yyyy'}}</td>
       <td class="text-center">{{evento.qtdPessoas}}</td>
       <td class="text-center">{{evento.lote}}</td>
       <td class="text-center">
@@ -37,8 +37,12 @@
       </td>
     </tr>
   </tbody>
+  <tfoot *ngIf="!eventos.length">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h4>Nenhum Evento Encontrado</h4>
+      </td>
+    </tr>
+  </tfoot>
 </table>
-
-
-
 
