@@ -1,10 +1,44 @@
-<h1>Eventos</h1>
+<h2>Eventos</h2>
+<hr>
+<form class="row row-cols-lg-auto g-3 align-items-center" action="">
+  <div class="form-group mb-2">
+    <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
+    <div class="input-group">
+      <input type="text" class="form-control mr-2" placeholder="buscar">
+    </div>
+  </div>
+</form>
 
-<div *ngFor="let evento of eventos">
-  <p><b>Tema: </b> {{evento.tema}}</p>
-  <p><b>Local: </b>{{evento.local}}</p>
-  <hr>
-</div>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th class="text-center" scope="col">#</th>
+      <th class="text-center" scope="col">Imagem</th>
+      <th class="text-center" scope="col">Tema</th>
+      <th class="text-center" scope="col">Local</th>
+      <th class="text-center" scope="col">Data</th>
+      <th class="text-center" scope="col">Qtd Pessoas</th>
+      <th class="text-center" scope="col">Lote</th>
+      <th class="text-center" scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evento of eventos">
+      <td class="text-center">{{evento.eventoId}}</td>
+      <td class="text-center">{{evento.imgURL}}</td>
+      <td class="text-center">{{evento.tema}}</td>
+      <td class="text-center">{{evento.local}}</td>
+      <td class="text-center">{{evento.dataEvento}}</td>
+      <td class="text-center">{{evento.qtdPessoas}}</td>
+      <td class="text-center">{{evento.lote}}</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Deletar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 
