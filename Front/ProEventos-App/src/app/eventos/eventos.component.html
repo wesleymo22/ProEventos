@@ -1,19 +1,27 @@
 <h2>Eventos</h2>
 <hr>
-<form class="row row-cols-lg-auto g-3 align-items-center" action="">
+<div class="row row-cols-lg-auto g-3 align-items-center" >
   <div class="form-group mb-2">
     <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
     <div class="input-group">
-      <input type="text" class="form-control mr-2" placeholder="buscar">
+      <input type="text" class="form-control mr-2" placeholder="buscar"
+      [(ngModel)]="filtroLista">
     </div>
   </div>
-</form>
+</div>
+
+<h3>{{filtroLista}}</h3>
 
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
+      <th class="text-left" scope="col">
+        <button class="btn btn-outline-light btn-sm"
+        (click)="alterarImagem()">
+          {{!exibirImagem ? 'Exibir' : 'Ocultar'}}
+        </button>
+      </th>
       <th class="text-center" scope="col">#</th>
-      <th class="text-center" scope="col">Imagem</th>
       <th class="text-center" scope="col">Tema</th>
       <th class="text-center" scope="col">Local</th>
       <th class="text-center" scope="col">Data</th>
@@ -24,8 +32,14 @@
   </thead>
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventos">
+      <td class="text-center">
+        <img [collapse]="!exibirImagem"
+              [isAnimated]="true"
+          src="/assets/images/{{evento.imgURL}}"
+          width="100px"
+          margin="2">
+      </td>
       <td class="text-center">{{evento.eventoId}}</td>
-      <td class="text-center">{{evento.imgURL}}</td>
       <td class="text-center">{{evento.tema}}</td>
       <td class="text-center">{{evento.local}}</td>
       <td class="text-center">{{evento.dataEvento | date: 'dd/MM/yyyy'}}</td>
