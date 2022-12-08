@@ -869,6 +869,16 @@
             "rid": "win"
           }
         }
+      },
+      "ProEventos.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProEventos.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProEventos.Application.dll": {}
+        }
       }
     }
   },
@@ -2215,6 +2225,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ProEventos.Application/1.0.0": {
+      "type": "project",
+      "path": "../ProEventos.Application/ProEventos.Application.csproj",
+      "msbuildProject": "../ProEventos.Application/ProEventos.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2223,6 +2238,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.11",
+      "ProEventos.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2252,7 +2268,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+              "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
