@@ -505,6 +505,8 @@
       },
       "ProEventos.Persistence/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11",
           "ProEventos.Domain": "1.0.0"
         },
         "runtime": {

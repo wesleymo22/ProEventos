@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {}
+    "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "packagesPath": "C:\\Users\\Barone\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Barone\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+    "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "projectName": "ProEventos.Persistence",
-        "projectPath": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "packagesPath": "C:\\Users\\Barone\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Barone\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -76,14 +76,15 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "c:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               }
             }
           }
@@ -113,6 +114,8 @@
               "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.11, )"
             }
