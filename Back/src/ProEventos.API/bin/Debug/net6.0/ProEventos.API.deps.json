@@ -490,8 +490,25 @@
         }
       },
       "ProEventos.Application/1.0.0": {
+        "dependencies": {
+          "ProEventos.Domain": "1.0.0",
+          "ProEventos.Persistence": "1.0.0"
+        },
         "runtime": {
           "ProEventos.Application.dll": {}
+        }
+      },
+      "ProEventos.Domain/1.0.0": {
+        "runtime": {
+          "ProEventos.Domain.dll": {}
+        }
+      },
+      "ProEventos.Persistence/1.0.0": {
+        "dependencies": {
+          "ProEventos.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ProEventos.Persistence.dll": {}
         }
       }
     }
@@ -846,6 +863,16 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "ProEventos.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProEventos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProEventos.Persistence/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

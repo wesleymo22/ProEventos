@@ -62,3 +62,7 @@ C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\ne
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Application.dll
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Application.pdb
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Domain.dll
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Persistence.dll
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Domain.pdb
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Persistence.pdb
