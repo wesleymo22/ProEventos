@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ProEventos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProEventos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProEventos.Domain.dll": {}
+        }
+      },
+      "ProEventos.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ProEventos.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProEventos.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProEventos.Persistence.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProEventos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProEventos.Domain/ProEventos.Domain.csproj",
+      "msbuildProject": "../ProEventos.Domain/ProEventos.Domain.csproj"
+    },
+    "ProEventos.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../ProEventos.Persistence/ProEventos.Persistence.csproj",
+      "msbuildProject": "../ProEventos.Persistence/ProEventos.Persistence.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ProEventos.Domain >= 1.0.0",
+      "ProEventos.Persistence >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Barone\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+              "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+            },
+            "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Barone\\Documents\\GitHub\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

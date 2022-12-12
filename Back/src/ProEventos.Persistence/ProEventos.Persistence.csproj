@@ -11,4 +11,8 @@
     <ProjectReference Include="..\ProEventos.Persistence\ProEventos.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProEventos.Domain\ProEventos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
