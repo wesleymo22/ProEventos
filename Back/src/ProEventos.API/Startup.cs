@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ProEventos.API.Data;
+using ProEventos.Persistence;
 
 namespace ProEventos.API
 {
@@ -30,7 +30,7 @@ namespace ProEventos.API
         {
 
             
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<ProEventosContext>(
                 context => context.UseSqlServer(Configuration.GetConnectionString("Default"))
             );
             services.AddControllers();
