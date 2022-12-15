@@ -1,16 +1,17 @@
 
 using Microsoft.EntityFrameworkCore;
 using ProEventos.Domain;
+using ProEventos.Persistence.Contexto;
 using ProEventos.Persistence.Contratos;
 
 
 namespace ProEventos.Persistence
 {
-    public class GeralPersistence : IGeralPersist
+    public class GeralPersist : IGeralPersist
     {
         private readonly ProEventosContext _context;
 
-        public GeralPersistence(ProEventosContext context)
+        public GeralPersist(ProEventosContext context)
         {
             _context = context;
         }
