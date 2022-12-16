@@ -1,44 +1,40 @@
-
-using Microsoft.EntityFrameworkCore;
-using ProEventos.Domain;
-using ProEventos.Persistence.Contexto;
+using System.Threading.Tasks;
+using ProEventos.Persistence.Contextos;
 using ProEventos.Persistence.Contratos;
-
 
 namespace ProEventos.Persistence
 {
     public class GeralPersist : IGeralPersist
     {
         private readonly ProEventosContext _context;
-
         public GeralPersist(ProEventosContext context)
         {
             _context = context;
-        }
 
-        public void Add<t>(t entity) where t : class
+        }
+        public void Add<T>(T entity) where T : class
         {
-            _context.Add(entity);
+            _context.AddAsync(entity);
         }
 
-        public void Update<t>(t entity) where t : class
+        public void Update<T>(T entity) where T : class
         {
             _context.Update(entity);
         }
 
-        public void Delete<t>(t entity) where t : class
+        public void Delete<T>(T entity) where T : class
         {
             _context.Remove(entity);
         }
 
-        public void DeleteRange<t>(t[] entity) where t : class
+        public void DeleteRange<T>(T[] entityArray) where T : class
         {
-            _context.RemoveRange(entity);
+            _context.RemoveRange(entityArray);
         }
+
         public async Task<bool> SaveChangesAsync()
         {
             return (await _context.SaveChangesAsync()) > 0;
         }
-
     }
 }

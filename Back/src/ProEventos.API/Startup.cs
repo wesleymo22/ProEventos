@@ -15,7 +15,7 @@ using Microsoft.OpenApi.Models;
 using ProEventos.Application;
 using ProEventos.Application.Contratos;
 using ProEventos.Persistence;
-using ProEventos.Persistence.Contexto;
+using ProEventos.Persistence.Contextos;
 using ProEventos.Persistence.Contratos;
 
 namespace ProEventos.API
@@ -67,9 +67,9 @@ namespace ProEventos.API
 
             app.UseAuthorization();
 
-            app.UseCors(cors => cors.AllowAnyHeader()
-                                    .AllowAnyMethod()
-                                    .AllowAnyOrigin());
+            app.UseCors(x => x.AllowAnyHeader()
+                              .AllowAnyMethod()
+                              .AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {

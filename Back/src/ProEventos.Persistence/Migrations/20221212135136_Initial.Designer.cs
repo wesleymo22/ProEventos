@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProEventos.Persistence;
-using ProEventos.Persistence.Contexto;
+using ProEventos.Persistence.Contextos;
 
 #nullable disable
 
