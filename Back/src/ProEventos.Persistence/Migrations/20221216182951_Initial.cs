@@ -16,7 +16,7 @@ namespace ProEventos.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Local = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DataEvento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Tema = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     QtdPessoas = table.Column<int>(type: "int", nullable: false),
                     ImgURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -36,7 +36,7 @@ namespace ProEventos.Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MiniCurriculo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImagemUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagemURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -74,12 +74,11 @@ namespace ProEventos.Persistence.Migrations
                 columns: table => new
                 {
                     PalestranteId = table.Column<int>(type: "int", nullable: false),
-                    EnventoId = table.Column<int>(type: "int", nullable: false),
                     EventoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PalestrantesEventos", x => new { x.EnventoId, x.PalestranteId });
+                    table.PrimaryKey("PK_PalestrantesEventos", x => new { x.EventoId, x.PalestranteId });
                     table.ForeignKey(
                         name: "FK_PalestrantesEventos_Eventos_EventoId",
                         column: x => x.EventoId,
@@ -101,8 +100,8 @@ namespace ProEventos.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EventoId = table.Column<int>(type: "int", nullable: true),
+                    URL = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventoId = table.Column<int>(type: "int", nullable: false),
                     PalestranteId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -112,7 +111,8 @@ namespace ProEventos.Persistence.Migrations
                         name: "FK_RedesSociais_Eventos_EventoId",
                         column: x => x.EventoId,
                         principalTable: "Eventos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_RedesSociais_Palestrantes_PalestranteId",
                         column: x => x.PalestranteId,
@@ -124,11 +124,6 @@ namespace ProEventos.Persistence.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Lotes_EventoId",
                 table: "Lotes",
-                column: "EventoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PalestrantesEventos_EventoId",
-                table: "PalestrantesEventos",
                 column: "EventoId");
 
             migrationBuilder.CreateIndex(

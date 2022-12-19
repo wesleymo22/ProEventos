@@ -66,3 +66,7 @@ C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\ne
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Persistence.dll
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Domain.pdb
 C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\ProEventos.Persistence.pdb
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Barone\Documents\GitHub\ProEventos\Back\src\ProEventos.API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
